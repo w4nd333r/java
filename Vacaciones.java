@@ -1,10 +1,12 @@
 import java.util.Scanner;
-import java.time.LocalDate;
-import java.time.Period;
+import java.text.DecimalFormat;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class Vacaciones {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
+        DecimalFormat format = new DecimalFormat("###,###.##");
 
         // variables vac == Tiempo que lleva en la empresa Clave== clave a la que
         // pertenece
@@ -30,7 +32,7 @@ public class Vacaciones {
             mes = in.nextInt();
             System.out.println("Ingrese el dia de su nacimiento");
             dia = in.nextInt();
-            if ((mes == 1 && dia > 0 || dia <= 19)) {
+            if ((mes == 1 && dia > 0 && dia <= 19)) {
                 System.out.println("Su signo es capricornio");
             } else if ((mes == 1 && dia > 19) || (mes == 2 && dia <= 18)) {
                 System.out.println("Su signo es acuario");
@@ -60,32 +62,24 @@ public class Vacaciones {
                 System.out.println("******A INGRESADO LA FECHA MAL******");
             }
         } else if (opcion == 2) {
-            // esto esta malisimo pa
-            System.out.print("Número día nacimiento: ");
+            System.out.println("Has seleccionado la opcion 2");
+            System.out.print("Ingresa tu edad: ");
+            edad = in.nextInt();
 
-            int dia = in.nextInt();
+            int meses = edad * 12;
+            int msn;
+            System.out.println("Ingrese el mes en el que nacio");
+            msn = in.nextInt();
+            int mes = meses + msn;
+            int dias = edad * 365 + (msn * 30);
+            int horas = dias * 24;
 
-            System.out.print("Numero mes nacimiento: ");
-
-            int mes = in.nextInt();
-
-            System.out.print("Año nacimiento: ");
-
-            int anio = in.nextInt();
-
-            in.close();
-
-            System.out.println("\nTu edad es: " + calcularEdad(dia, mes, anio));
+            System.out.println("Has vivido aproximadamente " + (format.format(mes)) + " meses");
+            System.out.println("Has vivido aproximadamente " + (format.format(dias)) + " dias");
+            System.out.println("Has vivido aproximadamente " + (format.format(horas)) + " horas");
 
         }
 
-    }
-
-    static int calcularEdad(int dia, int mes, int anio) {
-        LocalDate fechaHoy = LocalDate.now();
-        LocalDate fechaNacimiento = LocalDate.of(anio, mes, dia);
-        Period periodo = Period.between(fechaNacimiento, fechaHoy);
-        return periodo.getYears();
     }
 
 }
