@@ -1,4 +1,6 @@
 import java.util.Scanner;
+import java.time.LocalDate;
+import java.time.Period;
 
 public class Vacaciones {
     public static void main(String[] args) {
@@ -6,65 +8,84 @@ public class Vacaciones {
 
         // variables vac == Tiempo que lleva en la empresa Clave== clave a la que
         // pertenece
-        int vac = 0;
+        int edad = 0;
         int clave = 0;
 
-        System.out.println("");
-        System.out.println("");
-        System.out.println("***************************************************");
-        System.out.println("*********Programa vacacional de w's company********");
-        System.out.println("***************************************************");
-        System.out.println("");
-        System.out.println("Recuerde que:");
-        System.out.println("Administratico = Clave 3");
-        System.out.println("Gente normal = Clave 2");
-        System.out.println("Venecos = Clave 1");
-        // Tienes que cambiar esta vaina pa no verte rasista:)
+        System.out.println("********MENU********");
+        System.out.println("1.Conozca su signo zodiacal");
+        System.out.println("2.calculadora de cuantos dias a vivido");
+        System.out.println("3.edad en dias de perro");
+        System.out.println("4.El numero que te representa segun la numerologia");
+        System.out.println("5.Salir");
+        System.out.println("Ingrese una opcion");
+        int opcion = 0;
 
-        // Poniendole valor a la variable nombre
-        System.out.println("Introduzca su nombre: ");
-        String name = in.nextLine();
-        System.out.println("");
-        System.out.println("");
-        // Poniendole valor a la variable clave
-        System.out.println("Introduzca la clave a la que pertenece: ");
-        clave = in.nextInt();
-        System.out.println("");
-        System.out.println("");
-        // Poniendole valor a la variable vac==Tiempo que llevan trabajando
-        System.out.println("Introduzca los años que lleva trabajando en la empresa");
-        vac = in.nextInt();
-        System.out.println("");
-        System.out.println("");
+        opcion = in.nextInt();
 
-        if (clave == 1 && vac == 1) {
-            System.out.println("sr" + name + "Sus vacaciones seran de 10  dias");
+        if (opcion == 1) {
 
-        } else if (clave == 1 && vac > 1 && vac <= 3) {
-            System.out.println("sr" + name + "Sus vacaciiones seran de 20 dias");
-        } else if (clave == 1 && vac > 3 && vac <= 10) {
-            System.out.println("sr" + name + "Sus vacaciiones seran de 30 dias");
+            int mes = 0;
+            int dia = 0;
+            System.out.println("Ingrese el mes de su nacimiento(En numeros por favor)");
+            mes = in.nextInt();
+            System.out.println("Ingrese el dia de su nacimiento");
+            dia = in.nextInt();
+            if ((mes == 1 && dia > 0 || dia <= 19)) {
+                System.out.println("Su signo es capricornio");
+            } else if ((mes == 1 && dia > 19) || (mes == 2 && dia <= 18)) {
+                System.out.println("Su signo es acuario");
+            } else if (mes == 2 && dia > 18 || mes == 3 && dia <= 20) {
+                System.out.println("Su signo es piscis");
+            } else if (mes == 3 && dia > 20 || mes == 4 && dia <= 19) {
+                System.out.println("Su signo es ARIES");
+            } else if (mes == 4 && dia > 19 || mes == 5 && dia <= 21) {
+                System.out.println("Su signo es Tauro");
+            } else if (mes == 5 && dia > 21 || mes == 6 && dia <= 20) {
+                System.out.println("Su signo es Geminis");
+            } else if (mes == 6 && dia > 20 || mes == 7 && dia <= 22) {
+                System.out.println("Su signo es Cancer");
+            } else if (mes == 7 && dia > 22 || mes == 8 && dia <= 22) {
+                System.out.println("Su signo es Leo");
+            } else if (mes == 8 && dia > 22 || mes == 9 && dia <= 22) {
+                System.out.println("Su signo es Virgo");
+            } else if (mes == 9 && dia > 22 || mes == 10 && dia <= 22) {
+                System.out.println("Su signo es Libra");
+            } else if (mes == 10 && dia > 22 || mes == 11 && dia <= 21) {
+                System.out.println("Su signo es Escorpio");
+            } else if (mes == 11 && dia > 21 || mes == 12 && dia <= 21) {
+                System.out.println("Su signo es Sagitario");
+            } else if (mes == 12 && dia > 21 || mes == 1 && dia <= 19) {
+                System.out.println("Su signo es capricornio");
+            } else {
+                System.out.println("******A INGRESADO LA FECHA MAL******");
+            }
+        } else if (opcion == 2) {
+            // esto esta malisimo pa
+            System.out.print("Número día nacimiento: ");
 
-        } else if (clave == 2 && vac == 1) {
-            System.out.println("sr" + name + "Sus vacaciiones seran de 15 dias");
+            int dia = in.nextInt();
 
-        } else if (clave == 2 && vac > 1 && vac <= 3) {
-            System.out.println("sr" + name + "Sus vacaciiones seran de 25 dias");
+            System.out.print("Numero mes nacimiento: ");
 
-        } else if (clave == 2 && vac > 3 && vac <= 10) {
-            System.out.println("sr" + name + "Sus vacaciiones seran de 35 dias");
+            int mes = in.nextInt();
 
-        } else if (clave == 3 && vac == 1) {
-            System.out.println("sr" + name + "Sus vacaciiones seran de 20 dias");
+            System.out.print("Año nacimiento: ");
 
-        } else if (clave == 3 && vac > 1 && vac <= 3) {
-            System.out.println("sr" + name + "Sus vacaciiones seran de 30 dias");
+            int anio = in.nextInt();
 
-        } else if (clave == 3 && vac > 3 && vac <= 10) {
-            System.out.println("sr" + name + "Sus vacaciiones seran de 40 dias");
+            in.close();
+
+            System.out.println("\nTu edad es: " + calcularEdad(dia, mes, anio));
 
         }
 
+    }
+
+    static int calcularEdad(int dia, int mes, int anio) {
+        LocalDate fechaHoy = LocalDate.now();
+        LocalDate fechaNacimiento = LocalDate.of(anio, mes, dia);
+        Period periodo = Period.between(fechaNacimiento, fechaHoy);
+        return periodo.getYears();
     }
 
 }
