@@ -62,6 +62,9 @@ public class Vacaciones {
                 System.out.println("******A INGRESADO LA FECHA MAL******");
             }
         } else if (opcion == 2) {
+            // compae esto es la parte 2 de las horitas y como que los commits no se
+            // realizan
+
             System.out.println("Has seleccionado la opcion 2");
             System.out.print("Ingresa tu edad: ");
             edad = in.nextInt();
