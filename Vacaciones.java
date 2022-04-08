@@ -13,13 +13,27 @@ public class Vacaciones {
         int edad = 0;
         int clave = 0;
 
-        System.out.println("********MENU********");
-        System.out.println("1.Conozca su signo zodiacal");
-        System.out.println("2.calculadora de cuantos dias a vivido");
-        System.out.println("3.edad en dias de perro");
-        System.out.println("4.El numero que te representa segun la numerologia");
-        System.out.println("5.Salir");
-        System.out.println("Ingrese una opcion");
+        System.out.println("   ________________________________________");
+            System.out.println(" / \\                                       \\.");
+            System.out.println("|   |                                      |.");
+            System.out.println(" \\_ |                                      |.");
+            System.out.println("    |      Que accion deseas realizar      |.");
+            System.out.println("    |                                      |.");
+            System.out.println("    | 1) Calcular su signo del zodiaco.    |.");
+            System.out.println("    | 2) Calcular los días vividos.        |.");
+            System.out.println("    | 3) Calcular edad en años perro.      |.");
+            System.out.println("    | 4) Calcular su número de numerología.|.");
+            System.out.println("    | 5) Creditos.                         |.");
+            System.out.println("    | 6) Salir.                            |.");
+            System.out.println("    |                                      |.");
+            System.out.println("    |                                      |.");
+            System.out.println("    |                                      |.");
+            System.out.println("    |   ___________________________________|___");
+            System.out.println("    |  /                                      /.");
+            System.out.println("    \\_/______________________________________/.");
+            System.out.println("");
+            System.out.println("");
+            System.out.println("Elija una opcion:");
         int opcion = 0;
 
         opcion = in.nextInt();
@@ -33,34 +47,35 @@ public class Vacaciones {
             System.out.println("Ingrese el dia de su nacimiento");
             dia = in.nextInt();
             if ((mes == 1 && dia > 0 && dia <= 19)) {
-                System.out.println("Su signo es capricornio");
+                System.out.println("Su signo es CAPRICORNIO");
             } else if ((mes == 1 && dia > 19) || (mes == 2 && dia <= 18)) {
-                System.out.println("Su signo es acuario");
+                System.out.println("Su signo es ACUARIO");
             } else if (mes == 2 && dia > 18 || mes == 3 && dia <= 20) {
-                System.out.println("Su signo es piscis");
+                System.out.println("Su signo es PISCIS");
             } else if (mes == 3 && dia > 20 || mes == 4 && dia <= 19) {
                 System.out.println("Su signo es ARIES");
             } else if (mes == 4 && dia > 19 || mes == 5 && dia <= 21) {
-                System.out.println("Su signo es Tauro");
+                System.out.println("Su signo es TAURO");
             } else if (mes == 5 && dia > 21 || mes == 6 && dia <= 20) {
-                System.out.println("Su signo es Geminis");
+                System.out.println("Su signo es GEMINIS");
             } else if (mes == 6 && dia > 20 || mes == 7 && dia <= 22) {
-                System.out.println("Su signo es Cancer");
+                System.out.println("Su signo es CANCER");
             } else if (mes == 7 && dia > 22 || mes == 8 && dia <= 22) {
-                System.out.println("Su signo es Leo");
+                System.out.println("Su signo es LEO");
             } else if (mes == 8 && dia > 22 || mes == 9 && dia <= 22) {
-                System.out.println("Su signo es Virgo");
+                System.out.println("Su signo es VIRGO");
             } else if (mes == 9 && dia > 22 || mes == 10 && dia <= 22) {
-                System.out.println("Su signo es Libra");
+                System.out.println("Su signo es LIBRA");
             } else if (mes == 10 && dia > 22 || mes == 11 && dia <= 21) {
-                System.out.println("Su signo es Escorpio");
+                System.out.println("Su signo es ESCORPIO");
             } else if (mes == 11 && dia > 21 || mes == 12 && dia <= 21) {
-                System.out.println("Su signo es Sagitario");
+                System.out.println("Su signo es SAGITARIO");
             } else if (mes == 12 && dia > 21 || mes == 1 && dia <= 19) {
-                System.out.println("Su signo es capricornio");
+                System.out.println("Su signo es CAPRICORNIO");
             } else {
                 System.out.println("******A INGRESADO LA FECHA MAL******");
-            }
+                
+            } 
         } else if (opcion == 2) {
             // compae esto es la parte 2 de las horitas y como que los commits no se
             // realizan
@@ -80,6 +95,20 @@ public class Vacaciones {
             System.out.println("Has vivido aproximadamente " + (format.format(mes)) + " meses");
             System.out.println("Has vivido aproximadamente " + (format.format(dias)) + " dias");
             System.out.println("Has vivido aproximadamente " + (format.format(horas)) + " horas");
+            
+
+        } else if(opcion == 3){
+            System.out.println("Ha registrado la opcion 3: edad en años de perro");
+            int edad1 = 0;
+            int perro = 0;
+            System.out.println("Ingrese su edad");
+            edad1 = in.nextInt();
+            perro =edad1*7;
+            System.out.println("Su edad en años perro es: "+ perro + "años");
+            
+
+            
+
 
         }
 
