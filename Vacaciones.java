@@ -137,23 +137,15 @@ public class Vacaciones {
                     }
                 }else {
                     System.out.println("ingrese un dígito valido");
-                }  
-                    
+                } 
+            }else {
+                System.out.println("ingrese un dígito valido");
+            }                
                      
-
-
-
-
-
-
-
         }
 
-    }
-
-   }
-  }
-
+    }  
+  
 }
 // W4ND333R
 // Mateoacevedo15
