@@ -115,7 +115,12 @@ public class Vacaciones {
             System.out.println("Ingrese el primer dígito de su día de nacimiento:");
             int digito1 = in.nextInt();
 
-            
+            if (digito1 <10) {
+
+                System.out.println("Ingrese el segundo dígito de su día de nacimiento:");
+                int digito2 = in.nextInt();
+                if (digito2 <10) {
+
 
 
 
@@ -125,6 +130,9 @@ public class Vacaciones {
         }
 
     }
+
+   }
+  }
 
 }
 // W4ND333R
