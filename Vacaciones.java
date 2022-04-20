@@ -120,6 +120,8 @@ public class Vacaciones {
                 System.out.println("Ingrese el segundo dígito de su día de nacimiento:");
                 int digito2 = in.nextInt();
                 if (digito2 <10) {
+                 int numero = digito1 + digito2;
+                 System.out.println("\nSu número es el" + " " + numero);
 
 
 
