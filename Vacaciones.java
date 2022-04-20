@@ -112,6 +112,11 @@ public class Vacaciones {
 
         } else if(opcion == 4) {
             System.out.println("Ha registrado la opcion 4: Número según la nuemrología");
+            System.out.println("Ingrese el primer dígito de su día de nacimiento:");
+            int digito1 = in.nextInt();
+
+            
+
 
 
 
