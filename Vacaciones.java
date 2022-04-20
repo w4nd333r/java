@@ -134,7 +134,10 @@ public class Vacaciones {
 
                      System.out.println("\nSu número es" + " " + numero2);
 
-                 }
+                    }
+                }else {
+                    System.out.println("ingrese un dígito valido");
+                }  
                     
                      
 
