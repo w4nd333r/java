@@ -130,6 +130,13 @@ public class Vacaciones {
 
                      System.out.println("Ingrese el segundo dígito del resultado:");
                      int digito4 = in.nextInt();
+                     int numero2 = digito3 + digito4;
+
+                     System.out.println("\nSu número es" + " " + numero2);
+
+                 }
+                    
+                     
 
 
 
