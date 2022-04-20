@@ -123,6 +123,10 @@ public class Vacaciones {
                  int numero = digito1 + digito2;
                  System.out.println("\nSu número es el" + " " + numero);
 
+                 if (numero >10) {
+                     System.out.println("Ya que la suma de los dos dígitos del día de su nacimiento es mayor que 10, ingrese los dos dígitos del resultado de sumar los dos número de su día de nacimiento:");
+                     System.out.println("Ingrese el primer dígito del resultado:");
+
 
 
 
