@@ -2,6 +2,7 @@ import java.util.Scanner;
 import java.text.DecimalFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+//comandos importados scanner-reloj-decimal
 
 public class Vacaciones {
     public static void main(String[] args) {
@@ -39,6 +40,7 @@ public class Vacaciones {
         opcion = in.nextInt();
 
         if (opcion == 1) {
+            System.out.println("Ha registrado la opcion uno, signo zodiacal.");
 
             int mes = 0;
             int dia = 0;
@@ -77,10 +79,9 @@ public class Vacaciones {
                 
             } 
         } else if (opcion == 2) {
-            // compae esto es la parte 2 de las horitas y como que los commits no se
-            // realizan
+            //tiempo aprximado vivido
 
-            System.out.println("Has seleccionado la opcion 2");
+            System.out.println("Ha registrado la opcion dos, tiempo vivido.");
             System.out.print("Ingresa tu edad: ");
             edad = in.nextInt();
 
@@ -98,7 +99,8 @@ public class Vacaciones {
             
 
         } else if(opcion == 3){
-            System.out.println("Ha registrado la opcion 3: edad en años de perro");
+            //Edad en años perro
+            System.out.println("Ha registrado la opcion tres, edad en años de perro.");
             int edad1 = 0;
             int perro = 0;
             System.out.println("Ingrese su edad");
@@ -110,9 +112,44 @@ public class Vacaciones {
             
 
 
+        } else if(opcion == 4) {
+            Numero segun la numerologia
+            System.out.println("Ha registrado la opcion cuatro, Número según la nuemrología.");
+            System.out.println("Ingrese el primer dígito de su día de nacimiento:");
+            int digito1 = in.nextInt();
+
+            if (digito1 <10) {
+
+                System.out.println("Ingrese el segundo dígito de su día de nacimiento:");
+                int digito2 = in.nextInt();
+                if (digito2 <10) {
+                 int numero = digito1 + digito2;
+                 System.out.println("\nSu número es el" + " " + numero);
+
+                 if (numero >10) {
+                     System.out.println("Ya que la suma de los dos dígitos del día de su nacimiento es mayor que 10, ingrese los dos dígitos del resultado de sumar los dos número de su día de nacimiento:");
+                     System.out.println("Ingrese el primer dígito del resultado:");
+                     int digito3 = in.nextInt();
+
+                     System.out.println("Ingrese el segundo dígito del resultado:");
+                     int digito4 = in.nextInt();
+                     int numero2 = digito3 + digito4;
+
+                     System.out.println("\nSu número es" + " " + numero2);
+
+                    }
+                }else {
+                    System.out.println("ingrese un dígito valido");
+                } 
+            }else {
+                System.out.println("ingrese un dígito valido");
+            }                
+                     
         }
 
-    }
-
+    }  
+  
 }
-// W4ND333R
+// W4ND333R 
+// Mateoacevedo15
+
