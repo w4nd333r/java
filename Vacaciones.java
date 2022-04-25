@@ -77,8 +77,7 @@ public class Vacaciones {
                 
             } 
         } else if (opcion == 2) {
-            // compae esto es la parte 2 de las horitas y como que los commits no se
-            // realizan
+            //tiempo aprximado vivido
 
             System.out.println("Has seleccionado la opcion 2");
             System.out.print("Ingresa tu edad: ");
@@ -98,6 +97,7 @@ public class Vacaciones {
             
 
         } else if(opcion == 3){
+            //Edad en años perro
             System.out.println("Ha registrado la opcion 3: edad en años de perro");
             int edad1 = 0;
             int perro = 0;
@@ -111,6 +111,7 @@ public class Vacaciones {
 
 
         } else if(opcion == 4) {
+            Numero segun la numerologia
             System.out.println("Ha registrado la opcion 4: Número según la nuemrología");
             System.out.println("Ingrese el primer dígito de su día de nacimiento:");
             int digito1 = in.nextInt();
