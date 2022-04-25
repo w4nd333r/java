@@ -114,7 +114,7 @@ public class Vacaciones {
 
         } else if(opcion == 4) {
             Numero segun la numerologia
-            System.out.println("Ha registrado la opcion cuaatro, Número según la nuemrología.");
+            System.out.println("Ha registrado la opcion cuatro, Número según la nuemrología.");
             System.out.println("Ingrese el primer dígito de su día de nacimiento:");
             int digito1 = in.nextInt();
 
